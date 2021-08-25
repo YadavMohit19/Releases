@@ -168,7 +168,7 @@ Variant - $BUILD_TYPE" >/dev/null
 GitHub: $LINK
 Sha256sum: $OTA_SHA256"
 			telegram --sendmsg "Build completed successfully in $((BUILD_DIFF / 3600)) hour and $((BUILD_DIFF / 60)) minute(s)
-Filename: [${OTA_NAME}](https://github.com/$GH_RELEASE/Releases/download/$TAG/$OTA_NAME)
+Filename: [${OTA_NAME}](https://github.com/$GH_RELEASE/releases/download/$TAG/$OTA_NAME)
 Size: \`$OTA_SIZE\`
 Sha256sum: \`$OTA_SHA256\`
 Download: [Github]($LINK)"
