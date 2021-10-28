@@ -22,7 +22,7 @@ if [ "$5" ]; then
 	AUTH="Authorization: token $GITHUB_TOKEN"
 
 	# Create new release
-	ID=$(curl -X POST "$GITHUB_REPO/releases" -H "$AUTH" -d "{\"tag_name\": \"$TAG\", \"target_commitish\": \"$BRANCH\", \"name\": \"$TAG\", \"body\": \"$DESC\"}" | jq '.id')
+	ID=$(curl -X POST "$GITHUB_REPO/Releases" -H "$AUTH" -d "{\"tag_name\": \"$TAG\", \"target_commitish\": \"$BRANCH\", \"name\": \"$TAG\", \"body\": \"$DESC\"}" | jq '.id')
 
 	# Upload file
 	GITHUB_ASSET="https://uploads.github.com/repos/$REPO/releases/$ID/assets?name=$(basename "$FILE")"
